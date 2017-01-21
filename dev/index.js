@@ -36,6 +36,7 @@ const ComponentsList = ({componentName}) => {
 
 ReactDOM.render((
     <Router history={browserHistory}>
+        <Route path="/dev" component={DevelopmentEnv}/>
         <Route path="/dev/:component" component={DevelopmentEnv}/>
     </Router>
 ), document.querySelector('.dev'));

@@ -8,14 +8,14 @@ Easy and fast base library for ui components - clone the project and create your
 4. search within the code for `<your_lib_name>` and replace it with your library name.
 5. Run `Yarn start` - this will be our development mode.
 6. Craete a folder inside `src` (or duplicate one of the folders).
-7. Go to `http://localhost:3344/dev/ComponentName` (change `ComponentName` to your new component).
+7. Go to `http://localhost:5566/dev/ComponentName` (change `ComponentName` to your new component).
 
 ## How to develop new component?
 1. First clone the project locally.
 2. Run `Yarn Install` (or just `yarn`).
 3. Run `Yarn start` - this will be our development mode.
 4. Craete a folder inside `src` (or duplicate one of the folders).
-5. Go to `http://localhost:3344/dev/ComponentName` (change `ComponentName` to your new component).
+5. Go to `http://localhost:5566/dev/ComponentName` (change `ComponentName` to your new component).
 
 ## How to install it in your project?
 1. Install with `npm install <your_lib_name> --save`.

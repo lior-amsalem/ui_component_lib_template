@@ -1,6 +1,6 @@
 var path = require('path');
     webpack = require('webpack'),
-    port = 3344,
+    port = 5566,
     localhost = 'http://localhost:' + port,
     hotMiddlewareEntry = 'webpack-hot-middleware/client?path=' + localhost + '/__webpack_hmr';
 

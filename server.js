@@ -13,15 +13,19 @@ app.use(require('webpack-dev-middleware')(compiler, {
     publicPath: config.output.publicPath
 }));
 
-app.get('/dev/:component', function(req, res) {
+app.get('/dev*', function(req, res) {
     res.sendFile(path.join(__dirname, 'dev/index.html'));
 });
 
-app.listen(3344, 'localhost', function(error) {
+app.get('/', function(req, res) {
+    res.redirect('/dev');
+});
+
+app.listen(5566, 'localhost', function(error) {
     if (error) {
         console.log(error);
         return;
     }
 
-    console.log('Go to http://localhost:3344');
+    console.log('Go to http://localhost:5566');
 });
