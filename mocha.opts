@@ -1,0 +1,5 @@
+--require ./test_setup.js
+--growl
+--full-trace
+--inline-diffs
+--timeout 200

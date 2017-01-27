@@ -18,7 +18,7 @@ class ComponentOne extends React.Component {
         } = this.props;
 
         return (
-            <div>
+            <div className="hello-world">
                 <h1>Hello, {msg} - this is a test from comp one</h1>
             </div>
         )
