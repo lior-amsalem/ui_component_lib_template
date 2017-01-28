@@ -1,14 +1,24 @@
-# Template for anyone who wants to build their own UI component library in React
-Easy and fast base library for ui components - clone the project and create your own ui component library!
+# Template for UI component library in React
+Easy and fast base library for ui components, If you want to build UI lib for your company or project - all you have to do is to clone the project and create your own ui component library!
+
+## Features
+- Dev Env in express / storybook react as dev env & doc.
+- Tests ENV in Enzyme & mocha & growl suport.
+- CI integratoin.
+- Easy webpack configuration structure (see webpack per env files and webpack folder).
+- HMR with webpack and react hot loader.
 
 ## How to start? / create your first UI component library?
 1. Clone the project locally.
 2. Pick a name for your UI component library.
-3. Run `Yarn Install` (or just `yarn`).
+3. Run `Yarn install` (or just `yarn`).
 4. search within the code for `<your_lib_name>` and replace it with your library name.
 5. Run `Yarn start` - this will be our development mode.
 6. Craete a folder inside `src` (or duplicate one of the folders).
 7. Go to `http://localhost:5566/dev/ComponentName` (change `ComponentName` to your new component).
+
+or you can use react storybook dev env:
+run `yarn storybook` and go to [http://localhost:6006/](http://localhost:6006/).
 
 ## How to develop new component?
 1. First clone the project locally.
@@ -17,8 +27,6 @@ Easy and fast base library for ui components - clone the project and create your
 4. Craete a folder inside `src` (or duplicate one of the folders).
 5. Go to `http://localhost:5566/dev/ComponentName` (change `ComponentName` to your new component).
 
-or
-- run `yarn storybook` and go to `http://localhost:6006/`.
 
 ## How to install it in your project?
 1. Install with `npm install <your_lib_name> --save`.
@@ -40,8 +48,8 @@ npm link creates a symlink inside your project's `node_modules` folder to your l
 - Work with webpack 2 and tree shaking.
 - Inside `index.js` load the `ComponentsList` across all components for easy and fast access (as dropdown with a small icon on the top right).
 
-## How o Write Story
-[Writing Story](https://getstorybook.io/docs/react-storybook/basics/writing-stories)
-
 ## How to install Yarn?
 [Install Yarn](https://yarnpkg.com/en/docs/install)
+
+## How o Write Story
+[Writing Story](https://getstorybook.io/docs/react-storybook/basics/writing-stories)

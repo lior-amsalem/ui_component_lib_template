@@ -1,7 +1,6 @@
 import MsgComponent from './index';
 
 describe('Example test MsgComponent', () => {
-
     it('Should be a div type element', () => {
         const CompOne = shallow(<MsgComponent />);
 
