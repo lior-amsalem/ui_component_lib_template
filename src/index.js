@@ -1,5 +1,5 @@
-import ComponentOne from './ComponentOne';
+import MsgComponent from './MsgComponent';
 
 export {
-    ComponentOne
+    MsgComponent
 }

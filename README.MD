@@ -17,6 +17,9 @@ Easy and fast base library for ui components - clone the project and create your
 4. Craete a folder inside `src` (or duplicate one of the folders).
 5. Go to `http://localhost:5566/dev/ComponentName` (change `ComponentName` to your new component).
 
+or
+- run `yarn storybook` and go to `http://localhost:6006/`.
+
 ## How to install it in your project?
 1. Install with `npm install <your_lib_name> --save`.
 2. Import to your "js" file: `import { Component } from '<your_lib_name>';`.
@@ -35,13 +38,10 @@ npm link creates a symlink inside your project's `node_modules` folder to your l
 
 ## Todo
 - Work with webpack 2 and tree shaking.
-- Build test env (with enzyme).
-- Allow consumption of a component with it's style dependencies.
-- Add guide case.
 - Inside `index.js` load the `ComponentsList` across all components for easy and fast access (as dropdown with a small icon on the top right).
 
-## Bugs
-1. 
+## How o Write Story
+[Writing Story](https://getstorybook.io/docs/react-storybook/basics/writing-stories)
 
 ## How to install Yarn?
 [Install Yarn](https://yarnpkg.com/en/docs/install)

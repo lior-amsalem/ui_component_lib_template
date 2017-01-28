@@ -7,7 +7,7 @@ module.exports = {
         /*
             Single use entry - import X from '<your_lib_name>/dist/Component';
          */
-        ComponentThird: './src/ComponentThird',
+        ComponentSecond: './src/ComponentSecond',
         /*
             import a entry - import { Component } from '<your_lib_name>';
          */

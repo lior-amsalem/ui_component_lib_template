@@ -1,7 +1,7 @@
 import React from 'react';
-import './component-Third.scss';
+import './msg-component.scss';
 
-class ComponentThird extends React.Component {
+class MsgComponent extends React.Component {
 
     constructor(props) {
         super(props);
@@ -18,15 +18,15 @@ class ComponentThird extends React.Component {
         } = this.props;
 
         return (
-            <div>
-                <h1>Hello, {msg} - this is a test from comp 3333</h1>
+            <div className="hello-world">
+                <h1>Hello {msg}</h1>
             </div>
         )
     }
 }
 
-ComponentThird.defaultProps = {
-    msg: '-' // msg
+MsgComponent.defaultProps = {
+    msg: '' // msg
 }
 
-export default ComponentThird;
+export default MsgComponent;
