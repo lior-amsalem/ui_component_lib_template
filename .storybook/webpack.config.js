@@ -1,11 +1,7 @@
+const loaderScssDev = require('../webpack/loader.scss.dev');
+
 module.exports = {
-    plugins: [
-        // your custom plugins
-    ],
     module: {
-        loaders: [{
-            test: /\.scss$/,
-            loader: 'style-loader!raw-loader!sass-loader'
-        }]
+        loaders: [loaderScssDev]
     }
 };

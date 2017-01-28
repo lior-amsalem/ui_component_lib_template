@@ -1,6 +1,9 @@
-var path = require('path');
+const path = require('path');
     webpack = require('webpack'),
     ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const loaderJsShared = require('./webpack/loader.js.shared'),
+    externalsProd = require('./webpack/externals.prod');
 
 module.exports = {
     entry: {
@@ -23,25 +26,18 @@ module.exports = {
         libraryTarget: 'umd'
     },
     module: {
-        loaders: [{
-            test: /\.js$/,
-            loaders: ['babel'],
-            include: [
-                path.join(__dirname, 'dev'),
-                path.join(__dirname, 'src')
-            ]
-        }, {
-            test: /\.scss$/,
-            loader: ExtractTextPlugin.extract(
-                'style-loader',
-                ['raw-loader', 'sass-loader']
-            )
-        }]
+        loaders: [
+            loaderJsShared,
+            {
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract(
+                    'style-loader',
+                    ['raw-loader', 'sass-loader']
+                )
+            }
+        ]
     },
-    externals: {
-        'react': 'react',
-        'react-dom': 'react-dom'
-    },
+    externals: externalsProd,
     plugins: [
         new ExtractTextPlugin('[name].css'),
         new webpack.optimize.UglifyJsPlugin({minimize: true}),

@@ -1,8 +1,11 @@
-var path = require('path');
+const path = require('path');
     webpack = require('webpack'),
     port = 5566,
     localhost = 'http://localhost:' + port,
     hotMiddlewareEntry = 'webpack-hot-middleware/client?path=' + localhost + '/__webpack_hmr';
+
+const loaderScssDev = require('./webpack/loader.scss.dev'),
+    loaderJsShared = require('./webpack/loader.js.shared');
 
 module.exports = {
     devtool: 'cheap-module-eval-source-map',
@@ -21,19 +24,17 @@ module.exports = {
         port: port
     },
     module: {
-        loaders: [{
-            test: /\.js$/,
-            loaders: ['babel'],
-            include: [
-                path.join(__dirname, 'dev'),
-                path.join(__dirname, 'src')
-            ]
-        }, {
-            test: /\.scss$/,
-            loader: 'style-loader!raw-loader!sass-loader'
-        }]
+        loaders: [
+            loaderJsShared,
+            loaderScssDev
+        ]
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.DefinePlugin({
+            'process.env': {
+                 NODE_ENV: JSON.stringify('development')
+            }
+        })
     ]
 };
