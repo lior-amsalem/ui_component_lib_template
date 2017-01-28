@@ -11,7 +11,9 @@
     "build:watch": "NODE_ENV=production webpack --config webpack.config.prod.js --watch",
     "prepublish": "npm run build",
     "test": "NODE_ENV=TEST mocha src/**/spec.js --opts mocha.opts",
-    "test:watch": "NODE_ENV=TEST mocha src/**/spec.js --watch --opts mocha.opts"
+    "test:watch": "NODE_ENV=TEST mocha src/**/spec.js --watch --opts mocha.opts",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
     "url": "https://github.com/lior-a/ui_component_lib_template/issues"
   },
   "devDependencies": {
+    "@kadira/storybook": "^2.21.0",
     "babel-cli": "^6.8.0",
     "babel-core": "^6.7.3",
     "babel-loader": "^6.2.1",
@@ -34,6 +37,7 @@
     "enzyme": "^2.7.1",
     "express": "^4.13.4",
     "growl": "^1.9.2",
+    "ignore-styles": "^5.0.1",
     "image-webpack-loader": "^1.8.0",
     "jsdom": "^9.9.1",
     "mocha": "^3.2.0",

@@ -1,4 +1,5 @@
 --require ./test_setup.js
+--require ignore-styles
 --growl
 --full-trace
 --inline-diffs
